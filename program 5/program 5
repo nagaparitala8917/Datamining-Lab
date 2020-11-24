@@ -1,0 +1,8 @@
+5.	Write a program to implement dbscan algorithm
+public int clusterInstance(Instance instance) throws Exception {
+    if (processed_InstanceID >= database.size()) processed_InstanceID = 0;
+    int cnum = (database.getDataObject(Integer.toString(processed_InstanceID++))).getClusterLabel();
+    if (cnum == DataObject.NOISE)
+        throw new Exception();
+    else
+        return cnum;
